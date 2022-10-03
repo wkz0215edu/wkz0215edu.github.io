@@ -1,0 +1,2621 @@
+/*
+ * Date:2017/12/8 
+ * Description:dialog
+ * 
+ */
+.mask {
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+}
+.dialog-view {
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	z-index: 102;
+	padding: 10px;
+	background: #FFFFFF;
+	border-radius: 8px;
+	transform: translate(-50%, -50%);
+	-ms-transform: translate(-50%, -50%);/* IE 9 */
+	-moz-transform: translate(-50%, -50%);/* Firefox */
+	-webkit-transform: translate(-50%, -50%);/* Safari 和 Chrome */
+}
+.dialog-view .close {
+	cursor: pointer;
+	width: 18px;
+}
+
+.dialog-view-login,
+.dialog-view-yz,
+.dialog-view-back {
+	width: 400px;
+}
+
+.dialog-view-list {
+	width: 650px;
+	height: 760px;
+}
+
+.dialog-view-pay,
+.dialog-view-payback,
+.dialog-view-payback-erro,
+.dialog-view-channel {
+	width: 400px;
+	/*height: 380px;*/
+}
+
+.dialog-view .view-head {
+	position: absolute;
+	right: 11px;
+	top: 11px;
+	cursor: pointer;
+}
+
+.dialog-view .view-body .view-title p {
+	color: #8A8A8A;
+	font-size: 16px;
+	text-align: center;
+}
+
+.dialog-view .view-body .view-content {
+	padding: 15px 35px 15px;
+}
+
+/*联系老师*/
+.dialog-view-contact.dialog-view .view-head .icon-history-close{
+	font-size: 27px;
+	color: #a9b9da;
+}
+.dialog-view-contact.dialog-view .view-body .view-content{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0 5px;
+}
+.dialog-view-contact.dialog-view .view-content .view-content-title{
+	font-size: 16px;
+	color: #2951a3;
+	margin: 44px 0 10px;
+	font-weight: 500;
+}
+.dialog-view-contact.dialog-view .view-content .view-content-img{
+	font-size: 0;
+	width: 100px;
+}
+.dialog-view-contact.dialog-view .view-content .view-content-text{
+	font-size: 12px;
+	color: #2951a3;
+	word-break: keep-all;
+	margin: 3px 0;
+}
+.dialog-view-contact.dialog-view .view-content .view-content-button{
+	width: 175px;
+	height: 35px;
+	background-color: #2951a3;
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	font-size: 16px;
+	margin: 20px 0 12px;
+	font-weight: 500;
+}
+.dialog-view .view-body .view-content .view-content-img{
+	text-align: center;
+}
+
+/*支付弹窗*/
+
+.dialog-view-pay .pay-title {
+	font-size: 20px;
+	font-weight: 600;
+	margin: 45px 0 25px 0;
+}
+
+.dialog-view-pay .pay-money {
+	margin: 0 0 60px 0;
+	font-size: 18px;
+}
+
+.dialog-view-pay .pay-money s {
+	font-size: 16px;
+}
+
+.dialog-view-pay .pay-btn {
+	display: block;
+	width: 100%;
+	margin-bottom: 16px;
+	border-radius: 8px;
+}
+.dialog-view-pay .pay-unsettled {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #939393;
+	font-size: 18px;
+}
+.dialog-view-pay .pay-unsettled img{
+	margin-right: 6px;
+	width: 22px;
+}
+.dialog-view-login .view-tab {
+	text-align: center;
+}
+
+/*.dialog-view-login .view-tab .check {
+	color: #f25a4f;
+	border-bottom: 3px solid #f25a4f;
+}*/
+
+.dialog-view-login .view-tab li {
+	display: inline-block;
+	margin: 0 26px;
+	padding: 8px 0 2px;
+	color: #8A8A8A;
+	font-size: 18px;
+	font-weight: 400;
+	cursor: pointer;
+}
+
+.dialog-view-login .login-tab .login-logo {
+	width: 100%;
+	padding: 12px 30px 10px;
+}
+
+.dialog-view-login .login-tab .login-logo img {
+	width: 100%;
+	display: block;
+}
+
+.dialog-view-login .login-agreement{
+	font-size: 12px;
+	color: #bbb;
+	padding-top: 12px;
+	
+	position: relative;
+}
+.dialog-view-login .login-agreement>p{
+	display: flex;
+	align-items: center;
+}
+.dialog-view-login .login-agreement>p:first-child{
+	line-height: 33px;
+}
+.dialog-view-login .login-agreement>p:nth-child(2){
+	justify-content: flex-end;
+}
+.dialog-view-login .login-agreement>p:first-child>span{
+	color: #51a0ff;
+	cursor: pointer;
+}
+.dialog-view-login .login-agreement>p>input{
+	margin-right: 6px;
+}
+.dialog-view-login .login-agreement>a{
+	display: block;
+	text-align: right;
+}
+.dialog-view-agreementUser .close-agreement,.dialog-view-agreementPolicy .close-agreement,.dialog-view-logout .close-agreement{
+	cursor: pointer;
+    width: 18px;
+}
+.dialog-view-agreementUser .view-content{
+	height: 500px;
+	overflow-y: auto;
+	width: 600px;
+}
+.dialog-view-agreementPolicy .view-content{
+	height: 500px;
+	width: 600px;
+	overflow-y: auto;
+}
+.dialog-view-logout .view-content{
+	height: 500px;
+	width: 600px;
+	overflow-y: auto;
+}
+.dialog-view-logout .view-bottom{
+	text-align: right;
+	color: #51a0ff;
+	cursor: pointer;
+	padding: 20px 50px;
+}
+.dialog-view-logoutConfirm{
+	z-index: 104;
+}
+.dialog-view-logoutConfirm .view-bottom{
+	display: flex;
+}
+.dialog-view-logoutConfirm .view-bottom p{
+	flex: 1;
+	text-align: center;
+	cursor: pointer;
+}
+.dialog-view-logoutConfirm .view-bottom p.cancel{
+	color: #666;
+}
+.dialog-view-logoutConfirm .view-bottom p.confirm{
+	color: #51a0ff;
+}
+.mask-logout{
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 103;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+
+.form-group {
+	margin-bottom: 25px;
+}
+
+.form-group .form-item {
+	position: relative;
+}
+
+.password-type.show .password-hide{
+	display: none;
+  }
+.password-type.show .password-show{
+	display: inline-block;
+}
+.password-hide{
+	right: 0;
+	cursor: pointer;
+	display: inline-block;
+}
+.password-show{
+	display: none;
+	right: 0;
+	cursor: pointer;
+}
+
+.form-group .form-item img {
+	position: absolute;
+	top: 9px;
+	width: 23px;
+}
+
+.form-group .form-item input {
+	width: 100%;
+	height: 41px;
+	border-bottom: 1px solid #F3F3F3;
+	padding: 10px 30px;
+	font-size: 14px;
+	line-height: 14px;
+}
+
+.form-group .form-item .form-control {
+	padding: 10px 150px 10px 30px;
+}
+
+
+
+.form-yzm {
+	position: absolute;
+	right: 12px;
+	top: 10px;
+	padding: 0 0 0 22px;
+	border-left: 2px solid #EEEEEE
+}
+
+.form-group .form-item .form-yzm .yzm {
+	padding: 5px 5px;
+	/*background: #FFFFFF;*/
+	border: none;
+	width: 100px;
+	cursor: pointer;
+}
+
+.form-error {
+	position: absolute;
+	top: 45px;
+	left: 0;
+	font-size: 12px;
+	color: #ff3333;
+}
+
+.form-error i {
+	vertical-align: middle;
+	margin-right: 6px;
+	font-size: 13px;
+}
+
+.sanfang img {
+	width: 24px;
+	height: 24px;
+	margin-left: 6px;
+	margin-top: 20px;
+}
+
+.sanfang img:hover {
+	cursor: pointer;
+	opacity: 0.7;
+}
+
+.dialog-back {
+	font-size: 24px;
+	cursor: pointer;
+}
+
+.form-group .form-item .form-yzm-img{
+	display: flex;
+	position: absolute;
+	top: 50%;
+	right: 12px;
+	transform: translateY(-50%);
+	align-items: center;
+}
+.form-group .form-item .form-yzm-img>img{
+	position:static;
+	width: auto;
+	height: 32px;
+}
+.form-group .form-item .form-yzm-img>a{
+	margin-left: 10px;
+	color: #4f82c2;
+}
+/*.title-center {
+	position: absolute;
+	left: 50%;
+	transform: translateX(-50%);
+}*/
+
+.form {
+	margin: 35px 0;
+}
+
+/*纸书购买弹窗*/
+
+.dialog-view-channel .view-body .view-title {
+	text-align: center;
+	padding: 20px 40px;
+}
+.dialog-view-channel .view-body .view-content {
+	padding: 15px 20px 15px;
+}
+
+.dialog-view-channel .title-center {
+	position: static;
+	transform: none;
+}
+
+.dialog-view-channel .view-content ul {
+	overflow: hidden;
+}
+
+.dialog-view-channel .view-content ul li img {
+	display: block;
+}
+.dialog-view-channel .view-content ul li {
+	display: inline-block;
+	margin: 10px 2px;
+	cursor: pointer;
+}
+.dialog-view-channel .view-content .wd-img{
+	display: none;
+	text-align: center;
+}
+/*购买成功*/
+.cx-payback-img {
+	margin: 25px 0 20px 0;
+}
+/*支付页面*/
+.cx-payback-img {
+	margin: 25px 0 20px 0;
+}
+.dialog-view-list .title {
+	padding: 20px;
+	text-align: left;
+	font-size: 20px;
+	margin-bottom: 40px;
+}
+/*四六级弹窗*/
+/*.dialog-view-tj{
+	display: none;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	z-index: 102;
+}
+.dialog-view-tj{
+	background: #FFFFFF;
+	border-radius: 8px;
+	padding: 10px;
+}
+.view-title-tj {
+	text-align: center;
+}
+
+.view-title-tj-p {
+	font-size: 24px;
+}
+
+.view-title-tj-des {
+	font-size: 12px;
+	padding: 15px 0;
+	color: #999;
+}
+
+.view-head-tj {
+	position: absolute;
+	right: 11px;
+	top: 11px;
+}
+
+.view-content-tj {
+	padding: 32px 150px;
+}
+
+.view-head-tj .close {
+	width: 18px;
+	cursor: pointer;
+}
+
+.view-content-btn {
+	overflow: hidden;
+}
+
+.view-content-cont {
+	padding: 0 12px 100px;
+	font-size: 18px;
+}*/
+/*报表选项弹窗*/
+.dialog-view-report{
+	width: 600px;
+	height: 400px;
+	padding: 20px;
+	overflow: hidden;
+    overflow-y: auto;
+}
+.cx-report-echarts-button{
+	cursor: pointer;
+}
+.view-report-year{
+	margin-bottom: 20px;
+}
+.view-report-year>p{
+	font-size: 20px;
+	font-weight: 500;
+	color: #333;
+}
+.view-report-month{
+	font-size: 0;
+}
+.view-report-month p{
+	display: inline-block;
+	width: 80px;
+	height: 30px;
+	font-size: 18px;
+	color: #333;
+	border-radius: 2px;
+	border: 2px solid #999999;
+	text-align: center;
+	line-height: 28px;
+	cursor: pointer;
+	margin-right: 20px;
+	margin-top: 10px;
+}
+.view-report-month p.checked{
+	background-color: #E30A17;
+	color: #fff;
+	border: 2px solid #E30A17;
+}
+@media only screen and (max-width:1024px) {
+	.dialog-view-list {
+		width: 592px;
+		height: 592px;
+	}
+	.dialog-view-list .title {
+		text-align: center;
+		font-size: 14px;
+	}
+	.dialog-view-pay {
+		width: 375px;
+		height: 296px;
+	}
+	.dialog-view-pay .pay-title {
+		margin: 20px 0;
+		font-size: 18px;
+	}
+	.dialog-view-pay .pay-money {
+		margin: 0 0 30px 0;
+	}
+	.dialog-view-pay .pay-btn {
+		margin-bottom: 14px;
+	}
+}
+
+@media only screen and (max-width:480px) {
+	.dialog-view-list,
+	.dialog-view-pay,
+	.dialog-view-payback-erro {
+		width: 100%;
+		height: auto;
+		top: auto;
+		bottom: 0;
+		left: 0;
+		transform: none;
+	}
+	.dialog-view-list .title {
+		margin-bottom: 0;
+	}
+}
+/* 询问框   /webSLibrary/search-collect.html */
+.dialog-view.dialog-view-normal{
+	display: none;
+	width: 400px;
+	padding: 0;
+	overflow: hidden;
+}
+.dialog-view-normal .view-header{
+	padding: 13px 23px;
+	font-size: 16px;
+}
+.dialog-view-normal .view-body>p{
+	padding: 44px 44px 28px;
+}
+.dialog-view-normal .view-body .view-btn{
+	padding: 16px 23px;
+}
+.dialog-view-normal .view-body .view-btn .btn{
+	padding: 0;
+	margin-left: 10px;
+}
+.view-header{
+	overflow: hidden;
+	background: #f1f1f1;
+}
+.view-header>p{
+	float: left;
+}
+.view-header>img{
+	float: right;
+}
+/* 笔记框 */
+.dialog-view.dialog-view-notes{
+	width: 659px;
+}
+.view-note-item{
+	padding: 15px 22px 0;
+}
+.view-note-item>p{
+	margin-bottom: 8px;
+	font-size: 16px;
+	color: #333;
+}
+.view-note-item>textarea{
+	width: 100%;
+	overflow-y: auto;
+	border: 1px solid #dedede;
+	padding: 7px 10px;
+	color:#717171;
+}
+textarea[name="original"]{
+	height: 90px;
+	cursor: default;
+}
+textarea[name="notes"]{
+	height: 180px;
+}
+
+
+
+
+/*新弹窗，将mask放入弹窗内部*/
+.dialog-view-new{
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+}
+.mask-new{
+	width: 100%;
+	height: 100%;
+}
+.dialog-view-new .p-form-list__content .input-width-25{
+	width: 25%;
+}
+.dialog-view-new .p-form-list__content .input-width-50{
+	width: 50%;
+}
+.dialog-view-new .p-form-list__content .input-width-75{
+	width: 75%;
+}
+.dialog-view-new .p-form-list__content .input-width-100{
+	width: 100%;
+}
+.dialog-view-new .view-head {
+    position: absolute;
+    right: 11px;
+    top: 11px;
+    cursor: pointer;
+}
+.dialog-view-new .close {
+	cursor: pointer;
+    width: 18px;
+    font-size: 12px;
+    color: rgba(0, 0, 0, 0.65);
+}
+
+.dialog-view-new-main{
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    z-index: 102;
+    /* padding: 10px; */
+    background: #FFFFFF;
+    border-radius: 8px;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+.dialog-view-new .view-body{
+}
+.dialog-view-new .c-select .aaa{
+	color: rgba(0, 0, 0, 0.65);
+}
+.dialog-view-new .c-select .aaa:hover{
+	background: rgba(0, 0, 0, 0.06);
+}
+.dialog-view-new .p-form-list__title{
+	color: #777;
+	line-height: 34px;
+}
+.dialog-view-new .c-error{
+	font-size: 12px;
+    line-height: 28px;
+}
+.dialog-view-new .p-form-list__item{
+	margin: 0;
+	padding: 0;
+	margin-bottom: 30px;
+	border: none;
+}
+.dialog-view-new .c-input,.dialog-view-new .c-select{
+	height: 34px;
+	padding: 0 10px;
+	font-size: 14px;
+}
+.dialog-view-new .view-body .view-title p{
+	text-align: left;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 1px solid #EBEBEB;
+    padding-bottom: 10px;
+    font-weight: 600;
+    padding: 10px;
+}
+
+
+
+/*新增收货地址*/
+.dialog-view-receivingAddress .dialog-view-new-main{
+	width: 566px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	border: 1px solid #FFFFFF;
+}
+.dialog-view-receivingAddress .close{
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.65);
+}
+.dialog-view-receivingAddress .view-body .view-title p{
+	text-align: left;
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #EBEBEB;
+	padding-bottom: 10px;
+}
+.dialog-view-receivingAddress .p-form__inner{
+	padding: 0;
+}
+.dialog-view-receivingAddress .view-body .view-content{
+	padding: 20px 40px 30px;
+}
+.dialog-view-receivingAddress .p-form-list__header{
+	justify-content: flex-end;
+	margin-right: 5px;
+	width: 17%;
+}
+.dialog-view-receivingAddress .p-form-list__title{
+	color: #777;
+}
+.dialog-view-receivingAddress .p-form__footer{
+	text-align: center;
+}
+.dialog-view-receivingAddress .c-btn-submit{
+	width: 60px;
+	height: 32px;
+	border-radius: 2px ;
+	background: #3D2D72;
+	border: 1px solid #3D2D72;
+	display: inline-block;
+	margin: 0 15px;
+}
+.dialog-view-receivingAddress .c-btn-cancel{
+	display: inline-block;
+	width: 60px;
+	border-radius: 2px ;
+	cursor: pointer;
+	height: 32px;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	margin: 0 15px;
+}
+.dialog-view-receivingAddress .el-cascader{
+	width: 100%;
+}
+.el-cascader .el-input .el-input__inner:focus, .el-cascader .el-input.is-focus .el-input__inner{
+	border-color: #2DA049
+}
+.el-cascader-node.in-active-path, .el-cascader-node.is-active, .el-cascader-node.is-selectable.in-checked-path {
+    color: #2DA049;
+    font-weight: 700;
+}
+
+
+/*新增编辑商品*/
+.dialog-view-editOrder .dialog-view-new-main{
+	width: 700px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	border: 1px solid #FFFFFF;
+}
+.dialog-view-editOrder .close{
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.65);
+}
+.dialog-view-editOrder .view-body .view-title p{
+	text-align: left;
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #EBEBEB;
+	padding-bottom: 10px;
+}
+.dialog-view-editOrder .dialog-view-editOrder-title{
+	padding: 28px 40px 10px;
+	font-size: 16px;
+	color: #333;
+}
+.dialog-view-editOrder .dialog-view-editOrder-list{
+	height: 429px;
+	overflow-y: auto;
+	padding: 0 40px;
+}
+
+.dialog-view-editOrder .dialog-view-editOrder-list::-webkit-scrollbar{
+	width: 6px;
+	height: 6px;
+}
+.dialog-view-editOrder .dialog-view-editOrder-list::-webkit-scrollbar-thumb{
+	border-radius:3px;
+	background-color: #ccc
+}
+.dialog-view-editOrder .dialog-view-editOrder-item{
+	display: flex;
+	align-items: center;
+}
+.dialog-view-editOrder .dialog-view-editOrder-item-checkbox p{
+	display: flex;
+	align-items: center;
+	cursor: pointer;
+}
+.dialog-view-editOrder .dialog-view-editOrder-item-checkbox p span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	border: 1px solid #D9D9D9;
+	color: #fff;
+	font-size: 24px;
+}
+.dialog-view-editOrder .dialog-view-editOrder-item-checkbox p.check-after span {
+	background: #3d2d72;
+	border-color: #3d2d72;
+}
+.dialog-view-editOrder .dialog-view-editOrder-item-price{
+	font-size: 16px;
+	color: #FF4517;
+}
+.dialog-view-editOrder .order-cont-detail{
+	width: 520px;
+}
+.dialog-view-editOrder .dialog-view-editOrder-button{
+	display: flex;
+	align-items: center;
+	padding: 20px 40px;
+}
+.dialog-view-editOrder .dialog-view-editOrder-button .dialog-view-editOrder-button-submit{
+	width: 140px;
+	height: 32px;
+	background: #3D2D73;
+	border-radius: 2px;
+	color: #fff;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-left: 72px;
+}
+.dialog-view-editOrder .dialog-view-editOrder-button .dialog-view-editOrder-button-cancel{
+	width: 140px;
+	height: 32px;
+	border: 1px solid #DDDDDD;
+	border-radius: 2px;
+	color: #555;
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-left: 40px;
+}
+.dialog-view-editOrder .dialog-view-editOrder-button-selectAll p{
+	display: flex;
+	align-items: center;
+}
+.dialog-view-editOrder .dialog-view-editOrder-button-selectAll p span {
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	width: 16px;
+	height: 16px;
+	border-radius: 2px;
+	border: 1px solid #D9D9D9;
+	color: #fff;
+	font-size: 24px;
+	margin-right: 30px;
+	cursor: pointer;
+}
+.dialog-view-editOrder .dialog-view-editOrder-button-selectAll p.check-after span {
+	background: #3d2d72;
+	border-color: #3d2d72;
+}
+
+
+/*发票信息-限高弹窗*/
+.dialog-view-invoice .dialog-view-new-main{
+	width: 660px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	border: 1px solid #FFFFFF;
+}
+.dialog-view-invoice .close{
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.65);
+}
+.dialog-view-invoice .view-body .view-title p{
+	text-align: left;
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #EBEBEB;
+	padding-bottom: 10px;
+}
+.dialog-view-invoice .view-body .view-content {
+    padding: 10px 40px 30px;
+	max-height: 50vh;
+	overflow: hidden;
+	overflow-y: auto;
+}
+.dialog-view-invoice .view-tips{
+	height: 36px;
+	line-height: 36px;
+	background: #FFF5E9;
+	border-radius: 1px;
+	margin: 10px 20px;
+	font-size: 14px;
+	color: #EF8300;
+}
+.dialog-view-invoice .view-tips span{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #EF8300;
+	color: #fff;
+	width: 14px;
+	height: 14px;
+	font-size: 12px;
+	border-radius: 100%;
+	margin: 0 5px 0 24px;
+}
+.dialog-view-invoice .p-form__inner{
+	padding: 0;
+}
+.dialog-view-invoice .p-form-list__header{
+	justify-content: flex-end;
+	margin-right: 5px;
+	width: 20%;
+}
+.dialog-view-invoice .p-form-list__item{
+	border: none;
+}
+.dialog-view-invoice .p-form__footer{
+	text-align: center;
+}
+.dialog-view-invoice .c-btn-submit{
+	width: 60px;
+	height: 32px;
+	border-radius: 2px ;
+	background: #3d2d72;
+	border: 1px solid #3d2d72;
+	display: inline-block;
+	margin: 0 15px;
+}
+.dialog-view-invoice .c-btn-cancel{
+	display: inline-block;
+	width: 60px;
+	border-radius: 2px ;
+	cursor: pointer;
+	height: 32px;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	margin: 0 15px;
+}
+
+/*物流信息-不限高弹窗*/
+.dialog-view-logistics .dialog-view-new-main{
+	width: 660px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	border: 1px solid #FFFFFF;
+}
+.dialog-view-logistics .close{
+	font-size: 12px;
+	color: rgba(0, 0, 0, 0.65);
+}
+.dialog-view-logistics .view-body .view-title p{
+	text-align: left;
+	font-size: 16px;
+	color: #333;
+	border-bottom: 1px solid #EBEBEB;
+	padding-bottom: 10px;
+}
+.dialog-view-logistics .view-body .view-content {
+    padding: 10px 40px 30px;
+}
+.dialog-view-logistics .view-tips{
+	height: 36px;
+	line-height: 36px;
+	background: #FFF5E9;
+	border-radius: 1px;
+	margin: 10px 20px;
+	font-size: 14px;
+	color: #EF8300;
+}
+.dialog-view-logistics .view-tips span{
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	background-color: #EF8300;
+	color: #fff;
+	width: 14px;
+	height: 14px;
+	font-size: 12px;
+	border-radius: 100%;
+	margin: 0 5px 0 24px;
+}
+.dialog-view-logistics .p-form__inner{
+	padding: 0;
+}
+.dialog-view-logistics .p-form-list__header{
+	justify-content: flex-end;
+	margin-right: 5px;
+	width: 20%;
+}
+.dialog-view-logistics .p-form-list__item{
+	border: none;
+}
+.dialog-view-logistics .p-form__footer{
+	text-align: center;
+}
+.dialog-view-logistics .c-btn-submit{
+	width: 60px;
+	height: 32px;
+	border-radius: 2px ;
+	background: #2DA049;
+	border: 1px solid #2DA049;
+	display: inline-block;
+	margin: 0 15px;
+}
+.dialog-view-logistics .c-btn-cancel{
+	display: inline-block;
+	width: 60px;
+	border-radius: 2px ;
+	cursor: pointer;
+	height: 32px;
+	background: #fff;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	margin: 0 15px;
+}
+.dialog-view-logistics .layui-form-select dl{
+	top: 41px;
+	padding: 0;
+	border: none;
+	color: rgba(0, 0, 0, 0.65);
+}
+.dialog-view-logistics .layui-form-select dl dd.layui-this{
+	background: rgba(0, 0, 0, 0.06);
+	color: rgba(0, 0, 0, 0.65);
+	
+}
+/* .dialog-view-logistics .layui-form-selected .layui-input{
+	border: 2px solid rgba(9, 109, 217, 0.2);
+} */
+
+/*确认弹窗*/
+.dialog-view-confirmButton .dialog-view-new-main{
+	width: 378px;
+	background: #FFFFFF;
+	box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.5);
+	border-radius: 8px;
+	border: 1px solid #FFFFFF;
+	padding: 0;
+}
+.dialog-view-confirmButton .view-body .view-title p{
+	padding: 48px 30px;
+	font-size: 16px;
+	color: #333;
+	text-align: left;
+	border: none;
+	font-weight: 400;
+}
+.dialog-view-confirmButton .view-body .view-content{
+	padding: 0;
+	border-top: 1px solid #EBEBEB;
+}
+.dialog-view-confirmButton .view-content-button{
+	display: flex;
+}
+.dialog-view-confirmButton .view-content-button p{
+	flex: 1;
+	font-size: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	padding: 9px 0;
+	cursor: pointer;
+}
+.dialog-view-confirmButton .view-content-button .button-cancel{
+	color: #666;
+	border-right: 1px solid #EBEBEB;
+}
+.dialog-view-confirmButton .view-content-button .button-confirm{
+	color: #3d2d72;
+}
+
+.p-form-list__content.area .c-list-button{
+	color: #8dc012;
+	line-height: 34px;
+	margin-left: 24px;
+	cursor: pointer;
+}
+
+.dialog-toast{
+    width: 180px;
+    height: 30px;
+    background: #fff;
+    box-shadow: 0px 3px 7px 1px rgba(0, 0, 0, 0.19);
+    border-radius: 1px;
+    position: fixed;
+    top: 12vh;
+    left: 50%;
+    color: #E1251B;
+    font-size: 14px;
+    font-weight: 600;
+    margin-left: -90px;
+    z-index: 999;
+    text-align: center;
+    line-height: 30px;
+    display: none;
+}
+
+
+
+
+/*微信支付弹窗*/
+.dialog-view-wxback.dialog-view .view-body .view-title p{
+	text-align: left;
+	font-size: 20px;
+	color: #333;
+	font-weight: 600;
+	padding: 10px 24px;
+}
+.dialog-view-wxback.dialog-view .view-body .view-content{
+	text-align: center;
+	padding:  0 294px 50px;
+}
+.dialog-view-wxback.dialog-view .dialog-view-wxback-title{
+	font-size: 14px;
+	color: #666;
+}
+.dialog-view-wxback.dialog-view .dialog-view-wxback-price{
+	font-size: 28px;
+	font-weight: 600;
+	color: #F66B20;
+}
+.dialog-view-wxback.dialog-view .dialog-view-wxback-bottom{
+	border-radius: 1px;
+	background: #2DA049;
+	display: flex;
+	font-size: 14px;
+	color: #fff;
+	width: 270px;
+	height: 50px;
+	justify-content: center;
+	align-items: center;
+}
+.dialog-view-wxback.dialog-view .dialog-view-wxback-bottom p{
+	display: flex;
+	flex-direction: column;
+	text-align: left;
+	margin-left: 18px;
+}
+.dialog-view-wxback-qrcode{
+	padding: 16px;
+	margin: 14px 0;
+	border: 1px solid #DDDDDD;
+}
+.dialog-view-wxback-qrcode img{
+	width: 240px;
+}
+
+
+
+
+
+/*企培-学时学分任务-详情页弹窗*/
+.dialog-view.dialog-view-explain{
+	padding: 24px 18px;
+	box-shadow: 0px 2px 10px 0px rgba(0, 0, 0, 0.1);
+	border-radius: 8px 8px 8px 0px;
+	/* max-width: 30%; */
+	width: 314px;
+	font-size: 16px;
+	color: #6C7683;
+	position: absolute;
+	margin-left: 178px;
+	margin-top: -36px;
+}
+.dialog-view.dialog-view-explain .view-head{
+	display: none;
+}
+.dialog-view.dialog-view-explain .view-title{
+	display: none;
+}
+.dialog-view.dialog-view-explain .view-body .view-content{
+	padding: 0;
+	overflow: hidden;
+    overflow-y: auto;
+    max-height: 200px;
+}
+
+/* 设置滚动条的样式 */
+.dialog-view.dialog-view-explain .view-body .view-content::-webkit-scrollbar {
+	width:6px;
+}
+/* 滚动槽 */
+.dialog-view.dialog-view-explain .view-body .view-content::-webkit-scrollbar-track {
+	-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.3);
+	border-radius:10px;
+}
+/* 滚动条滑块 */
+.dialog-view.dialog-view-explain .view-body .view-content::-webkit-scrollbar-thumb {
+	border-radius:10px;
+	background:rgba(0,0,0,0.1);
+	-webkit-box-shadow:inset 0 0 6px rgba(0,0,0,0.5);
+}
+.dialog-view.dialog-view-explain .view-body .view-content::-webkit-scrollbar-thumb:window-inactive {
+	/* background:rgba(255,0,0,0.4); */
+}
+@media screen and (max-width: 1024px) {
+	.dialog-view.dialog-view-explain{
+		width: calc(100vw - 58px);
+		position: fixed;
+		margin-left: 0;
+		margin-top: 0;
+		border-radius: 8px;
+		padding-top: 16px;
+	}
+	.dialog-view.dialog-view-explain .view-head{
+		display: block;
+		top: 19px;
+		right: 18px;
+	}
+	.dialog-view.dialog-view-explain .view-title{
+		display: block;
+		padding-bottom: 10px;
+		border-bottom: 1px solid #D8D8D8;
+	}
+	.dialog-view.dialog-view-explain .view-body .view-title p{
+		text-align: left;
+		color: #333;
+	}
+	.dialog-view.dialog-view-explain .view-body .view-content{
+		font-size: 14px;
+		color: #666;
+		padding-top: 24px;
+	}
+}
+
+
+/*手机解绑*/
+.dialog-view-unbindmobile{
+	width: 400px;
+}
+
+.dialog-view.dialog-view-unbindmobile .view-body .view-content{
+	padding: 34px 40px 65px ;
+}
+.dialog-view-unbindmobile.dialog-view .view-body .view-title p{
+	color: #333;
+	font-size: 18px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content>p:first-child{
+	font-size: 16px;
+	color: #666;
+	text-align: center;
+	margin-bottom: 50px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content>p:nth-child(2){
+	font-size: 16px;
+	color: #333;
+	text-align: center;
+	margin-bottom: 20px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content>p:nth-child(3){
+	font-size: 20px;
+	color: #333;
+	text-align: center;
+	margin-bottom: 44px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-input{
+	display: flex;
+	color: #999;
+	font-size: 14px;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-input a{
+	margin-left: 10px;
+    color: #4f82c2;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-input input{
+	width: 150px;
+	height: 40px;
+	border: 1px solid #999999;
+	border-radius: 4px;
+	margin-right: 17px;
+	padding: 0 13px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-input p{
+	width: 130px;
+	height: 40px;
+	background: #FFFFFF;
+	border: 1px solid #999999;
+	border-radius: 2px;
+	text-align: center;
+	line-height: 40px;
+	cursor: pointer;
+	pointer-events: none;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-input p.show{
+	pointer-events: all;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips{
+	height: 34px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p{
+	font-size: 14px;
+	color: #D92630;
+	position: relative;
+	display: none;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p::before{
+	content: '!';
+	position: absolute;
+	bottom: 0;
+	left: 27px;
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	z-index: 1;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span{
+    position: relative;
+    background-color: #D92630;
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 24px;
+	margin-top: 18px;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span:before,
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span,
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span:before,
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span:after {
+    width:  10px;
+    height: 10px;
+    border-top-right-radius: 30%;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span {
+    transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0,-50%);
+}
+.dialog-view-unbindmobile.dialog-view .view-content-tips p span:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+.dialog-view-unbindmobile.dialog-view .view-content-button{
+	width: 100%;
+	height: 48px;
+	background: #C6C6C6;
+	border-radius: 24px;
+	font-size: 16px;
+	color: #fff;
+	line-height: 48px;
+	text-align: center;
+	margin-top: 36px;
+	pointer-events: none;
+	cursor: pointer;
+}
+.dialog-view-unbindmobile.dialog-view .view-content-button.show{
+	background-color: #97040C;
+	pointer-events:all;
+}
+
+
+/*手机绑定*/
+.dialog-view-bindmobile{
+	width: 400px;
+}
+.dialog-view.dialog-view-bindmobile .view-body .view-content{
+	padding: 34px 40px 65px ;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item{
+	display: flex;
+	align-items: center;
+	margin-top: 40px;
+	color: #BFBFBF;
+	font-size: 16px;
+	position: relative;
+	height: 40px;
+}
+
+.dialog-view.dialog-view-bindmobile .view-content .view-item:first-child::before{
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: #DBDDDE;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item:nth-child(2)::before{
+	content: '';
+	width: 150px;
+	height: 1px;
+	background: #DBDDDE;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item:nth-child(3)::before{
+	content: '';
+	width: 150px;
+	height: 1px;
+	background: #DBDDDE;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item:first-child{
+	margin: 0;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item:nth-child(2) img{
+	cursor: pointer;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item:nth-child(2) a{
+	margin-left: 10px;
+    color: #4f82c2;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item img:first-child{
+	width: 20px;
+	margin-right: 14px;
+	cursor: default;
+}
+
+.dialog-view.dialog-view-bindmobile .view-content .view-item:nth-child(2) input{
+	margin-right: 15px;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item input{
+	width: 100px;
+	flex: 1;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item:nth-child(3) p{
+	width: 104px;
+	height: 40px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #999;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 15px;
+	pointer-events: none;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-item:nth-child(3) p.show{
+	pointer-events: all;
+	border: 1px solid #C42B34;
+	color: #C42B34;
+}
+.dialog-view.dialog-view-bindmobile .view-content .view-button{
+	width: 100%;
+	height: 48px;
+	background: #97040C;
+	border-radius: 24px;
+	line-height: 48px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 50px;
+	font-size: 16px;
+}
+.dialog-view.dialog-view-bindmobile .view-tips p{
+	/* display: none; */
+
+}
+.dialog-view.dialog-view-bindmobile .view-tips{
+	height: 34px;
+	padding: 0 20px;
+}
+.dialog-view.dialog-view-bindmobile .view-tips p{
+	font-size: 14px;
+	color: #D92630;
+	position: relative;
+	display: none;
+}
+.dialog-view.dialog-view-bindmobile .view-tips p::before{
+	content: '!';
+	position: absolute;
+	bottom: 0;
+	left: 27px;
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	z-index: 1;
+}
+.dialog-view.dialog-view-bindmobile .view-tips p span{
+    position: relative;
+    background-color: #D92630;
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 24px;
+	margin-top: 18px;
+}
+.dialog-view.dialog-view-bindmobile .view-tips p span:before,
+.dialog-view.dialog-view-bindmobile .view-tips p span:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+.dialog-view.dialog-view-bindmobile .view-tips p span,
+.dialog-view.dialog-view-bindmobile .view-tips p span:before,
+.dialog-view.dialog-view-bindmobile .view-tips p span:after {
+    width:  10px;
+    height: 10px;
+    border-top-right-radius: 30%;
+}
+.dialog-view.dialog-view-bindmobile .view-tips p span {
+    transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.dialog-view.dialog-view-bindmobile .view-tips p span:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0,-50%);
+}
+.dialog-view.dialog-view-bindmobile .view-tips p span:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+
+
+
+
+.dialog-view-unbindemail{
+	width: 400px;
+	padding: 0;
+}
+.dialog-view.dialog-view-unbindemail .view-body .view-title p{
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #DCDCDC;
+	padding: 20px;
+	text-align: left;
+}
+.dialog-view.dialog-view-unbindemail .view-head{
+	right: 20px;
+	top: 25px;
+}
+.dialog-view.dialog-view-unbindemail .close{
+	width: 14px;
+}
+.dialog-view.dialog-view-unbindemail .view-body .view-content{
+	padding: 38px 20px 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+.dialog-view.dialog-view-unbindemail .view-content-button{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.dialog-view.dialog-view-unbindemail .view-content-button p{
+	width: 152px;
+	height: 37px;
+	line-height: 37px;
+	background: #FFFFFF;
+	border: 1px solid #999999;
+	font-size: 16px;
+	color: #999;
+	cursor: pointer;
+}
+.dialog-view.dialog-view-unbindemail .view-content-button p:nth-child(2){
+	border-color: #C42B34;
+	color: #C42B34;
+}
+
+/*邮箱绑定*/
+.dialog-view-bindemail{
+	width: 400px;
+}
+.dialog-view.dialog-view-bindemail .view-body .view-content{
+	padding: 34px 40px 65px ;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item{
+	display: flex;
+	align-items: center;
+	margin-top: 40px;
+	color: #BFBFBF;
+	font-size: 16px;
+	position: relative;
+	height: 40px;
+}
+
+.dialog-view.dialog-view-bindemail .view-content .view-item:first-child::before{
+	content: '';
+	width: 100%;
+	height: 1px;
+	background: #DBDDDE;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item:nth-child(2)::before{
+	content: '';
+	width: 150px;
+	height: 1px;
+	background: #DBDDDE;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item:nth-child(3)::before{
+	content: '';
+	width: 150px;
+	height: 1px;
+	background: #DBDDDE;
+	position: absolute;
+	left: 0;
+	bottom: 0;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item:first-child{
+	margin: 0;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item:nth-child(2) img{
+	cursor: pointer;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item:nth-child(2) a{
+	margin-left: 10px;
+    color: #4f82c2;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item img:first-child{
+	width: 20px;
+	margin-right: 14px;
+	cursor: default;
+}
+
+.dialog-view.dialog-view-bindemail .view-content .view-item:nth-child(2) input{
+	margin-right: 15px;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item input{
+	width: 100px;
+	flex: 1;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item:nth-child(3) p{
+	width: 104px;
+	height: 40px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #999;
+	line-height: 40px;
+	text-align: center;
+	cursor: pointer;
+	margin-left: 15px;
+	pointer-events: none;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-item:nth-child(3) p.show{
+	pointer-events: all;
+	border: 1px solid #C42B34;
+	color: #C42B34;
+}
+.dialog-view.dialog-view-bindemail .view-content .view-button{
+	width: 100%;
+	height: 48px;
+	background: #97040C;
+	border-radius: 24px;
+	line-height: 48px;
+	color: #fff;
+	text-align: center;
+	cursor: pointer;
+	margin-top: 50px;
+	font-size: 16px;
+}
+.dialog-view.dialog-view-bindemail .view-tips p{
+	/* display: none; */
+
+}
+.dialog-view.dialog-view-bindemail .view-tips{
+	height: 34px;
+	padding: 0 20px;
+}
+.dialog-view.dialog-view-bindemail .view-tips p{
+	font-size: 14px;
+	color: #D92630;
+	position: relative;
+	display: none;
+}
+.dialog-view.dialog-view-bindemail .view-tips p::before{
+	content: '!';
+	position: absolute;
+	bottom: 0;
+	left: 27px;
+	font-size: 12px;
+	color: #fff;
+	display: inline-block;
+	z-index: 1;
+}
+.dialog-view.dialog-view-bindemail .view-tips p span{
+    position: relative;
+    background-color: #D92630;
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 24px;
+	margin-top: 18px;
+}
+.dialog-view.dialog-view-bindemail .view-tips p span:before,
+.dialog-view.dialog-view-bindemail .view-tips p span:after {
+    content: '';
+    position: absolute;
+    background-color: inherit;
+}
+.dialog-view.dialog-view-bindemail .view-tips p span,
+.dialog-view.dialog-view-bindemail .view-tips p span:before,
+.dialog-view.dialog-view-bindemail .view-tips p span:after {
+    width:  10px;
+    height: 10px;
+    border-top-right-radius: 30%;
+}
+.dialog-view.dialog-view-bindemail .view-tips p span {
+    transform: rotate(-60deg) skewX(-30deg) scale(1,.866);
+}
+.dialog-view.dialog-view-bindemail .view-tips p span:before {
+    transform: rotate(-135deg) skewX(-45deg) scale(1.414, .707) translate(0,-50%);
+}
+.dialog-view.dialog-view-bindemail .view-tips p span:after {
+    transform: rotate(135deg) skewY(-45deg) scale(.707, 1.414) translate(50%);
+}
+
+/*解绑qq*/
+.dialog-view-unbindqq{
+	width: 400px;
+	padding: 0;
+}
+.dialog-view.dialog-view-unbindqq .view-body .view-title p{
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #DCDCDC;
+	padding: 20px;
+	text-align: left;
+}
+.dialog-view.dialog-view-unbindqq .view-head{
+	right: 20px;
+	top: 25px;
+}
+.dialog-view.dialog-view-unbindqq .close{
+	width: 14px;
+}
+.dialog-view.dialog-view-unbindqq .view-body .view-content{
+	padding: 38px 20px 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+.dialog-view.dialog-view-unbindqq .view-content-button{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.dialog-view.dialog-view-unbindqq .view-content-button p{
+	width: 152px;
+	height: 37px;
+	line-height: 37px;
+	background: #FFFFFF;
+	border: 1px solid #999999;
+	font-size: 16px;
+	color: #999;
+	cursor: pointer;
+}
+.dialog-view.dialog-view-unbindqq .view-content-button p:nth-child(2){
+	border-color: #C42B34;
+	color: #C42B34;
+}
+
+/*解绑wx*/
+.dialog-view-unbindwx{
+	width: 400px;
+	padding: 0;
+}
+.dialog-view.dialog-view-unbindwx .view-body .view-title p{
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #DCDCDC;
+	padding: 20px;
+	text-align: left;
+}
+.dialog-view.dialog-view-unbindwx .view-head{
+	right: 20px;
+	top: 25px;
+}
+.dialog-view.dialog-view-unbindwx .close{
+	width: 14px;
+}
+.dialog-view.dialog-view-unbindwx .view-body .view-content{
+	padding: 38px 20px 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+.dialog-view.dialog-view-unbindwx .view-content-button{
+	display: flex;
+	justify-content: space-between;
+	margin-top: 30px;
+}
+.dialog-view.dialog-view-unbindwx .view-content-button p{
+	width: 152px;
+	height: 37px;
+	line-height: 37px;
+	background: #FFFFFF;
+	border: 1px solid #999999;
+	font-size: 16px;
+	color: #999;
+	cursor: pointer;
+}
+.dialog-view.dialog-view-unbindwx .view-content-button p:nth-child(2){
+	border-color: #C42B34;
+	color: #C42B34;
+}
+
+/*无法绑定qq*/
+.dialog-view-qqtips{
+	width: 400px;
+	padding: 0;
+}
+
+.dialog-view.dialog-view-qqtips .view-body .view-title p{
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #DCDCDC;
+	padding: 20px;
+	text-align: left;
+}
+
+.dialog-view.dialog-view-qqtips .view-head{
+	right: 20px;
+	top: 25px;
+}
+.dialog-view.dialog-view-qqtips .close{
+	width: 14px;
+}
+.dialog-view.dialog-view-qqtips .view-body .view-content{
+	padding: 38px 20px 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+
+/*无法绑定wx*/
+.dialog-view-wxtips{
+	width: 400px;
+	padding: 0;
+}
+
+.dialog-view.dialog-view-wxtips .view-body .view-title p{
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #DCDCDC;
+	padding: 20px;
+	text-align: left;
+}
+
+.dialog-view.dialog-view-wxtips .view-head{
+	right: 20px;
+	top: 25px;
+}
+.dialog-view.dialog-view-wxtips .close{
+	width: 14px;
+}
+.dialog-view.dialog-view-wxtips .view-body .view-content{
+	padding: 38px 20px 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+
+/*无法解除绑定*/
+.dialog-view-nobind{
+	width: 400px;
+	padding: 0;
+}
+
+.dialog-view.dialog-view-nobind .view-body .view-title p{
+	font-size: 18px;
+	color: #333;
+	border-bottom: 1px solid #DCDCDC;
+	padding: 20px;
+	text-align: left;
+}
+
+.dialog-view.dialog-view-nobind .view-head{
+	right: 20px;
+	top: 25px;
+}
+.dialog-view.dialog-view-nobind .close{
+	width: 14px;
+}
+.dialog-view.dialog-view-nobind .view-body .view-content{
+	padding: 38px 20px 28px;
+	text-align: center;
+	font-size: 16px;
+	color: #333;
+}
+
+@media screen and (max-width: 1024px) {
+	/*绑定手机*/
+	.dialog-view-bindmobile{
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+	.dialog-view.dialog-view-bindmobile .view-body .view-content{
+		padding: 34px 10px 65px;
+	}
+	/*绑定邮箱*/
+	.dialog-view-bindemail{
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+	.dialog-view.dialog-view-bindemail .view-body .view-content{
+		padding: 34px 10px 65px;
+	}
+	/*解绑手机*/
+	.dialog-view-unbindmobile{
+		width: 100%;
+		height: 100%;
+		border-radius: 0;
+	}
+	.dialog-view.dialog-view-unbindmobile .view-body .view-content{
+		padding: 34px 10px 65px;
+	}
+	/*解绑qq*/
+	.dialog-view-unbindqq{
+		width: calc(100% - 60px);
+	}
+	.dialog-view.dialog-view-unbindqq .view-body .view-content{
+		padding: 0 15px 20px;
+		font-size: 14px;
+		text-align: left;
+	}
+	.dialog-view.dialog-view-unbindqq .view-body .view-title p{
+		font-size: 16px;
+		border: none;
+	}
+	.dialog-view.dialog-view-unbindqq .view-content-button{
+		margin-top: 20px;
+	}
+	.dialog-view.dialog-view-unbindqq .view-content-button p{
+		border: none;
+		text-align: right;
+	}
+	/*解绑wx*/
+	.dialog-view-unbindwx{
+		width: calc(100% - 60px);
+	}
+	.dialog-view.dialog-view-unbindwx .view-body .view-content{
+		padding: 0 15px 20px;
+		font-size: 14px;
+		text-align: left;
+	}
+	.dialog-view.dialog-view-unbindwx .view-body .view-title p{
+		font-size: 16px;
+		border: none;
+	}
+	.dialog-view.dialog-view-unbindwx .view-content-button{
+		margin-top: 20px;
+	}
+	.dialog-view.dialog-view-unbindwx .view-content-button p{
+		border: none;
+		text-align: right;
+	}
+	/*解绑邮箱*/
+	.dialog-view-unbindemail{
+		width: calc(100% - 60px);
+	}
+	.dialog-view.dialog-view-unbindemail .view-body .view-content{
+		padding: 0 15px 20px;
+		font-size: 14px;
+		text-align: left;
+	}
+	.dialog-view.dialog-view-unbindemail .view-body .view-title p{
+		font-size: 16px;
+		border: none;
+	}
+	.dialog-view.dialog-view-unbindemail .view-content-button{
+		margin-top: 20px;
+	}
+	.dialog-view.dialog-view-unbindemail .view-content-button p{
+		border: none;
+		text-align: right;
+	}
+
+	/*无法绑定qq*/
+	.dialog-view-qqtips{
+		width: calc(100% - 60px);
+	}
+	.dialog-view.dialog-view-qqtips .view-body .view-content{
+		padding: 0 15px 20px;
+		font-size: 14px;
+		text-align: left;
+	}
+	.dialog-view.dialog-view-qqtips .view-body .view-title p{
+		font-size: 16px;
+		border: none;
+	}
+
+	/*无法绑定wx*/
+	.dialog-view-wxtips{
+		width: calc(100% - 60px);
+	}
+	.dialog-view.dialog-view-wxtips .view-body .view-content{
+		padding: 0 15px 20px;
+		font-size: 14px;
+		text-align: left;
+	}
+	.dialog-view.dialog-view-wxtips .view-body .view-title p{
+		font-size: 16px;
+		border: none;
+	}
+
+	/*无法解除绑定*/
+	.dialog-view-nobind{
+		width: calc(100% - 60px);
+	}
+	.dialog-view.dialog-view-nobind .view-body .view-content{
+		padding: 0 15px 20px;
+		font-size: 14px;
+		text-align: left;
+	}
+	.dialog-view.dialog-view-nobind .view-body .view-title p{
+		font-size: 16px;
+		border: none;
+	}
+
+
+
+	.dialog-view-agreementUser .view-content{
+		width: 100%;
+		height: calc(100vh - 34px);
+	}
+	.dialog-view-agreementPolicy .view-content{
+		width: 100%;
+		height: calc(100vh - 34px);
+	}
+}
+
+
+
+
+
+
+/*图片放大效果弹窗*/
+.dialog-img {
+	display: none;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+	z-index: 102;
+	background: #000;
+}
+.dialog-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: contain;
+}
+
+
+
+.dialog-view-wxtips.show{
+	display: block!important;
+}
+.mask.show{
+	display: block!important;
+}
+
+.dialog-view-private{
+	width: 345px;
+	margin: 0 auto;
+}
+@media screen and (max-width: 1024px) {
+	.dialog-view-private{
+		width: calc(100vw - 30px);
+	}
+}
+
+.dialog-view-private .view-title{
+	height: 24px;
+}
+.dialog-view.dialog-view-private .view-body .view-content{
+	padding: 0 10px;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-info{
+	display: flex;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-info-img{
+	width: 86px;
+	height: 113px;
+	margin-right: 10px;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-info-img img{
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-info-title{
+	flex: 1;
+	font-size: 14px;
+	color: #666;
+	position: relative;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-info-title p{
+	overflow: hidden;
+	text-overflow: ellipsis;
+	display:-webkit-box; 
+	-webkit-box-orient:vertical;
+	-webkit-line-clamp:2;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-info-title p.private-info-title-price{
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	font-size: 16px;
+	color: #F86342;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-info-title p.private-info-title-price span{
+	margin-left: 10.5px;
+	font-size: 24px;
+}
+
+.dialog-view.dialog-view-private .view-body .view-content .private-tips p:first-child{
+	color: #666;
+	font-size: 14px;
+	margin-top: 25px;
+}
+.dialog-view.dialog-view-private .view-body .view-content .private-tips p:nth-child(2){
+	color: #666;
+	font-size: 13px;
+	/* margin-top: 16px; */
+	padding-bottom: 20px;
+}
+
+
+
+/*再次输入密码*/
+.mask-noClick{
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 101;
+	display: none;
+	width: 100%;
+	height: 100%;
+	background: rgba(0, 0, 0, .6);
+}
+.dialog-view-resetPassword{
+	width: 400px;
+}
+.noClose.dialog-view-resetPassword .view-head{
+	display: none;
+}
+.dialog-view-resetPassword .password-again{
+	position: absolute;
+	top: 63px;
+	left: 0;
+    font-size: 12px;
+    color: #999;
+}
+.dialog-view-resetPassword .view-ad{
+	height: 40px;
+	background: #FFFBE6;
+	border-radius: 2px;
+	border: 1px solid #FFE58F;
+	display: flex;
+	align-items: center;
+	color: rgba(0,0,0,0.6500);
+	line-height: 22px;
+	font-size: 14px;
+	padding: 0 16px;
+	width: 100%;
+}
+.dialog-view-resetPassword .view-ad::before{
+	content: '!';
+	display: inline-block;
+	width: 14px;
+	height: 14px;
+	background: #FAAD14;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	border-radius: 100%;
+	margin-right: 3px;
+}
+.dialog-view-resetPassword .view-ad p{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+	align-items: center;
+}
+.dialog-view-resetPassword .view-ad p i{
+	color: rgba(0,0,0,0.45);
+	font-size: 12px;
+	cursor: pointer;
+}
+
+/*小弹窗-确认*/
+.dialog-mini-confirm{
+	position: fixed;
+    top: 10%;
+    left: 50%;
+    z-index: 102;
+	width: 112px;
+	height: 40px;
+	background: #FFFFFF;
+	box-shadow: 0px 9px 28px 8px rgba(0,0,0,0.0500), 0px 6px 16px 0px rgba(0,0,0,0.0800), 0px 3px 6px -4px rgba(0,0,0,0.1200);
+	border-radius: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    -moz-transform: translate(-50%, -50%);
+    -webkit-transform: translate(-50%, -50%);
+}
+
+.dialog-view-saveSuccess{
+	width: 260px;
+	height: 178px;
+}
+.dialog-view-saveSuccess i{
+	font-size: 46px;
+}
+.dialog-view-saveSuccess .icon-active-success:before{
+	color: #50b7ff;
+}
+.dialog-view-saveSuccess .view-content>div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.dialog-view-saveSuccess .dialog-view-save-text{
+	margin: 16px 0 20px;
+	color: #3E3E3E;
+	line-height: 20px;
+	font-size: 14px;
+}
+.dialog-view-saveSuccess .dialog-view-save-button{
+	width: 212px;
+	height: 34px;
+	background: #50b7ff;
+	border-radius: 17px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+
+.dialog-view-saveFail{
+	width: 260px;
+	height: 178px;
+}
+.dialog-view-saveFail i{
+	font-size: 46px;
+}
+.dialog-view-saveFail .icon-active-fail:before{
+	color: #FF3B30;
+}
+.dialog-view-saveFail .view-content>div{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+}
+.dialog-view-saveFail .dialog-view-save-text{
+	margin: 16px 0 20px;
+	color: #3E3E3E;
+	line-height: 20px;
+	font-size: 14px;
+}
+.dialog-view-saveFail .dialog-view-save-button{
+	width: 212px;
+	height: 34px;
+	background: #50b7ff;
+	border-radius: 17px;
+	color: #fff;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.yk-dialog-upload{
+	display: none;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	width: 320px;
+	height: 108px;
+	background: #FFFFFF;
+	box-shadow: 0px 1px 5px 0px #CCCCCC;
+	border-radius: 11px;
+	margin-top: -54px;
+	margin-left: -160px;
+	padding: 0 20px;
+}
+.yk-dialog-upload-text{
+	font-size: 16px;
+	padding: 20px 0;
+	border-bottom: 1px solid #eee;
+}
+.yk-dialog-upload-button{
+	display: flex;
+	height: 48px;
+	font-size: 16px;
+}
+.yk-dialog-upload-button p{
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+}
+.yk-dialog-upload-button p:first-child{
+	color: #BC3019;
+}
+
+
+
+
+.dialog-view-test{
+	width: 480px;
+	height: 176px;
+	background: #FFFFFF;
+	box-shadow: 0px 12px 48px 16px rgba(0,0,0,0.03), 0px 9px 28px 0px rgba(0,0,0,0.05), 0px 6px 16px -8px rgba(0,0,0,0.08);
+	border-radius: 2px;
+	padding: 0;
+}
+.dialog-view.dialog-view-test .view-body .view-title{
+	padding: 16px 24px;
+	
+}
+.dialog-view.dialog-view-test .view-body .view-title p{
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0,0,0,0.85);
+	line-height: 24px;
+	text-align: left;
+}
+.dialog-view.dialog-view-test .view-body .view-content{
+	font-size: 14px;
+	color: rgba(0,0,0,0.65);
+	line-height: 22px;
+	padding: 24px 24px 22px;
+	border-top: 1px solid #F0F0F0;
+	border-bottom: 1px solid #F0F0F0;
+}
+
+.dialog-view.dialog-view-test .view-button{
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	height: 52px;
+}
+.dialog-view.dialog-view-test .view-button p:first-child{
+	width: 65px;
+	height: 32px;
+	background: #FFFFFF;
+	border-radius: 2px;
+	border: 1px solid #D9D9D9;
+	font-size: 14px;
+	color: rgba(0,0,0,0.65);
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-right: 8px;
+}
+.dialog-view.dialog-view-test .view-button p:nth-child(2){
+	width: 65px;
+	height: 32px;
+	background: #0D81FF;
+	border-radius: 2px;
+	font-size: 14px;
+	color: #FFFFFF;
+	line-height: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	margin-right: 16px;
+}
+
+
+
+
+.dialog-view-logininvalid{
+	position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 101;
+    display: none;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, .6);
+	transform: none;
+    -ms-transform: none;
+    -moz-transform: none;
+    -webkit-transform: none;
+	padding: 0;
+}
+.dialog-view.dialog-view-logininvalid .view-body{
+	width: 424px;
+	background: #FFFFFF;
+	box-shadow: 0px 12px 48px 16px rgba(0,0,0,0.03), 0px 9px 28px 0px rgba(0,0,0,0.05), 0px 6px 16px -8px rgba(0,0,0,0.08);
+	border-radius: 10px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-left: -212px;
+	margin-top: -89px;
+}
+
+.dialog-view.dialog-view-logininvalid .view-body .view-content{
+	padding: 32px;
+}
+.dialog-view.dialog-view-logininvalid .view-body .view-content>div{
+	display: flex;
+	flex-direction: column;
+}
+.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:first-child{
+	font-size: 16px;
+	font-weight: 600;
+	color: rgba(0,0,0,0.85);
+	line-height: 24px;
+	display: flex;
+	align-items: center;
+}
+.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:first-child::before{
+	content: '!';
+	width: 21px;
+	height: 21px;
+	background: #FAAD14;
+	display: inline-block;
+	border-radius: 100%;
+	color: #fff;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-right: 17px;
+}
+.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:nth-child(2){
+	font-size: 14px;
+	color: rgba(0,0,0,0.65);
+	line-height: 22px;
+	margin-top: 12px;
+	margin-left: 38px;
+}
+.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:nth-child(3){
+	width: 65px;
+	height: 32px;
+	background: #41B995;
+	border-radius: 2px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: #fff;
+	cursor: pointer;
+	margin-top: 24px;
+	align-self: flex-end;
+}
+
+@media screen and (max-width: 1024px) {
+	.dialog-view.dialog-view-logininvalid .view-body{
+		width: 240px;
+		margin-left: -120px;
+		margin-top: -47px;
+		overflow: hidden;
+	}
+	.dialog-view.dialog-view-logininvalid .view-body .view-content{
+		padding: 0;
+	}
+	.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:first-child{
+		display: none;
+	}
+	.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:nth-child(2){
+		font-size: 0;
+		margin: 0;
+		line-height: 20px;
+		padding: 15px 15px 12px;
+	}
+	.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:nth-child(2)::before{
+		content: '您的登录已失效，请重新登录。';
+		font-size: 14px;
+		color: #777777;
+		line-height: 20px;
+	}
+	.dialog-view.dialog-view-logininvalid .view-body .view-content>div>p:nth-child(3){
+		margin-top: 0;
+		width: 100%;
+		height: 42px;
+		font-size: 14px;
+		color: #41B995;
+		line-height: 20px;
+		background: #fff;
+		border-top: 1px solid #eee;
+	}
+}
+
+
+.dialog-view-score{
+	width: 480px;
+	padding: 0;
+}
+.dialog-view-score .view-body .view-content{
+	padding: 0;
+}
+.dialog-view-score .view-body .view-content>p{
+	padding: 42px 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	font-size: 24px;
+}
+.dialog-view-score .view-body .view-content>p>i{
+	margin-right: 24px;
+	cursor: pointer;
+	color: #fadc13;
+}
+.dialog-view-score .view-body .view-content>p>i:last-child{
+	margin-right: 0;
+}
+.dialog-view-score .view-content-button{
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding: 10px 16px;
+	border-top: 1px solid #F0F0F0;
+}
+.dialog-view-score .view-content-button p{
+	width: 64px;
+	height: 32px;
+	margin-left: 10px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 4px;
+	cursor: pointer;
+}
+.dialog-view-score .view-content-button p:first-child{
+	border: 1px solid #D9D9D9;
+}
+.dialog-view-score .view-content-button p:nth-child(2){
+	border: 1px solid #41b995;
+	background-color: #41b995;
+	color: #fff;
+}
+.dialog-view-score .view-body .view-title p{
+	text-align: left;
+	font-size: 16px;
+	color: rgba(0,0,0,0.85);
+	line-height: 24px;
+	padding: 16px 24px;
+	border-bottom: 1px solid #F0F0F0;
+}
+.dialog-view-score .close{
+	width: 16px;
+}
+.dialog-view-score .view-head{
+	top: 20px;
+}
+
+@media screen and (max-width: 1024px) {
+	.dialog-view-score{
+		width: 240px;
+	}
+	.dialog-view-score .view-body .view-title p{
+		font-size: 14px;
+		color: #333333;
+		line-height: 20px;
+		padding: 12px;
+	}
+	.dialog-view-score .view-body .view-content>p{
+		font-size: 20px;
+		padding: 20px 0;
+	}
+	.dialog-view-score .view-body .view-content>p>i{
+		margin-right: 14px;
+	}
+	.dialog-view-score .view-content-button p:first-child{
+		display: none;
+	}
+	.dialog-view-score .view-content-button p:nth-child(2){
+		margin: 0;
+		width: 100%;
+		color: #41B995;
+		background-color: #fff;
+		border: none;
+	}
+}

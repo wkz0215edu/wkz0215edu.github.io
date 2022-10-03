@@ -1,0 +1,588 @@
+a:hover {
+	color: #4461bd;
+}
+/*详情页pc购买按钮*/
+/*详情选中*/
+.check {
+	color: #4461bd;
+	border-bottom: 3px solid #4461bd;
+}
+.check a {
+	color: #4461bd;
+}
+.check-after{
+	color:#4461bd;
+}
+
+.tab-check{
+    color: #4461bd
+}
+@media only screen and (max-width: 1024px){
+	.cx-detail.class .detail-body .cont-main .detail-tab .detail-tab-item.tab-check::after {
+		content: '';
+		position: absolute;
+		left: 50%;
+		bottom: 10px;
+		transform: translateX(-50%);
+		width: 20px;
+		height: 2px;
+		background: #4461bd;
+
+	}
+}
+.cx-bgcolor-blue {
+	background: #4461bd;
+}
+.cx-bgcolor-gary {
+	background: #EEEEEE;
+}
+.cx-bgcolor-orange {
+	background: #eb8440
+}
+.cx-color-blue {
+	color: #4461bd;
+}
+.details-check {
+	color: #FFFFFF;
+	background: #4461bd;
+	border: 0;
+}
+/*
+.cx-button-blue {
+	border: 1px solid #65C1F1;
+	color: #65C1F1;
+	background: #FFFFFF;
+}
+.cx-button-blue:hover {
+	background: #65C1F1;
+	color: #FFFFFF;
+}*/
+.cx-info-uploadimg input {
+	border: 1px solid #4461bd;
+	background: #FFFFFF;
+	color: #4461bd;
+}
+.balance-check .balance-block-div {
+	border: 1px solid #4461bd;
+}
+.balance-check .balance-block-div-n {
+	background: #4461bd;
+	color: #FFFFFF;
+}
+.cx-message-i {
+	background: #4461bd;
+	color: #fff;
+}
+.cx-message-m-blue1 {
+	background: #4461bd;
+}
+.cx-message-m-blue2 {
+	background: #4461bd;
+}
+.cx-message-m-blue3 {
+	background: #4461bd;
+}
+.cx-nav-item:hover .cx-nav-link:after {
+	color: #4461bd !important;
+}
+.cx-nav-link:after {
+	background: #4461bd;
+}
+.detail-tab-item:hover{
+    color: #4461bd;
+}
+.mtree_check i{
+	color: #4461bd;
+}
+.mtree_check p{
+	color: #4461bd;
+}
+.cx-bag a {
+	color: #4461bd;
+}
+/*.cx-class-selec ul li:hover {
+	background: #4461bd;
+}*/
+/*.sele {
+	background: #4461bd;
+}*/
+.cx-search-phone-top {
+	background: #4461bd;
+}
+.cx-message-i {
+	background: #4461bd;
+}
+.cx-balance-sumit input {
+	background: #4461bd;
+}
+.cx-sliderbar .sliderbar-wechat .c-ewm p {
+	color: #4461bd;
+}
+/*按钮*/
+.c-btn-submit{
+	background: #4461bd;
+}
+.cx-button-normal {
+	background: #4461bd;
+}
+.cx-xq-des a {
+	color: #4461bd;
+}
+.view-tab .check{
+	color:#4461bd;
+}
+.dialog-view-login .view-tab .check{
+	color:#4461bd;
+	border-bottom: 3px solid #4461bd;
+}
+.form-group .form-item .form-yzm .yzm {
+	color: #4461bd;
+}
+.btn-text {
+	color: #4461bd;
+}
+.btn-buy {
+	background: #4461bd;
+}
+.btn-blue {
+	background-color: #4461bd;
+	border-color: #4461bd;
+}
+.btn-jointest{
+    color: #4461bd;
+    border: 1px solid #4461bd;
+}
+.btn-blue-empty{
+	color: #4461bd;
+    border-color: #4461bd;
+}
+.btn-blue-empty.focus, .btn-blue-empty:focus, .btn-blue-empty:hover{
+	color: #4461bd;
+}
+@media (max-width:1024px){
+	.model-courseware-item-tool>p>i{
+		color: #4461bd;
+	}
+}
+.model-courseware-leve1[data-lessonfolder]::before{
+	background: #4461bd;
+}
+
+.details-buy-two .details-buy-left {
+	color: #4461bd;
+}
+.details-buy-two .details-buy-right {
+	background: #4461bd;
+}
+.details-buy-one .details-buy-center {
+	background: #4461bd;
+}
+
+.details-buy-three .details-buy-left {
+	color: #4461bd;
+}
+
+.details-buy-three .details-buy-center {
+	background: #4461bd;
+}
+
+.details-buy-three .details-buy-right {
+	color: #4461bd;
+}
+.header.header-style-1 .search.search-fouseInput .icon-search{
+	/* color: #4461bd; */
+}
+.header.header-style-1 .search .search-btn:hover{
+	color: #4461bd;
+}
+.header.header-style-1 .cx-hotsearch ul a:hover li{
+	color: #4461bd;
+}
+/*4-6级测试*/
+.test_question_title {
+	border-left: 7px solid #4461bd;
+}
+.test_question .test_question_title{
+	border-left: 8px solid #4461bd;
+}
+.test_xctk .test_xctk_body .test_question_title{
+	border-left: 8px solid #4461bd;
+}
+.login_before .cet_nav li span:hover {
+	color: #4461bd;
+}
+.cet_home .cet_home_ul li:hover {
+	color: #4461bd;
+}
+.cx-info-des .active a {
+	color: #4461bd;
+}
+.cet-switch:checked {
+	border-color: #4461bd;
+	box-shadow: #4461bd 0 0 0 16px inset;
+	background-color: #4461bd;
+}
+.cet-switch.cet-switch-animbg:checked {
+	background-color: #4461bd;
+}
+.cet-switch.cet-switch-anim:checked {
+	box-shadow: #4461bd 0 0 0 16px inset;
+	background-color: #4461bd;
+}
+.test_xctk_body a i {
+	border-bottom: 2px solid #4461bd;
+}
+.model_abc {
+	border: 1px solid #4461bd;
+}
+.model_abc:after {
+	border-top: 1px solid #4461bd;
+	border-right: 1px solid #4461bd;
+}
+.test_datika_title_num {
+	color: #4461bd;
+}
+.test_dati_title p {
+	border-left: 3px solid #4461bd;
+}
+.test_time_p {
+	color: #4461bd;
+}
+.test_dati_ul ul .test_checked {
+	background: #4461bd;
+}
+.cx_column_level .cx_column_level_1 .person-check-1 a {
+	color: #4461bd;
+}
+.cx_column_level .cx_column_level_1 li:hover {
+	color: #4461bd;
+}
+.color-keyword{
+	color: #4461bd;
+}
+.pagination>.active>a, .pagination>.active>a:focus, .pagination>.active>a:hover, .pagination>.active>span, .pagination>.active>span:focus, .pagination>.active>span:hover{
+	background-color: #4461bd;
+    border-color: #4461bd;
+}
+.document-btn .btn-empty{
+	border: 1px solid #4461bd;
+    color: #4461bd;
+}
+
+/*分页颜色*/
+.pageJump .button{
+	color: #4461bd;
+}
+.pageJump .button:active {
+    color: #fff;
+    background-color: #4461bd;
+}
+.pageJump input{
+	/*color: #4461bd;*/
+}
+
+/*微库颜色*/
+.color-red{
+	color: #4461bd;
+}
+.search-group .search-input{
+	border-color: #4461bd;
+}
+.search-group .search-input-btn{
+	background: #4461bd;
+}
+.search-group .search-adv{
+	color: #4461bd;
+}
+.search-tool-charts .chartActive{
+	background: #4461bd;
+    border-color: #4461bd;
+}
+.search-tool-sort .sort-up, .search-tool-sort .sort-up{
+	color: #4461bd;
+}
+.search-tool-sort .sort-down, .search-tool-sort .sort-down{
+	color: #4461bd;
+}
+.docLibrary .docLibrary-l .docLibrary-checkall{
+	color: #4461bd;
+}
+.charts-list .chart-item .chart-item-tit a{
+	background: #4461bd;
+}
+.charts-list .chart-item .chart-item-child .chart-item-row>p.chartCheck{
+	color: #4461bd;
+}
+.document-btn a{
+	color: #4461bd;
+}
+.item-property{
+	border-left: 2px solid #4461bd;
+}
+.search-group-adv-tit p{
+	color: #4461bd;
+}
+.btn-searchDoc{
+	background: #4461bd;
+}
+.category-menu-list .first{
+	background-color: #4461bd;
+}
+.category-menu-list .on>a{
+	color: #4461bd;
+	border-color: #4461bd;
+	border-right: 1px solid #fff;
+}
+.second_list{
+	border-color: #4461bd;
+	
+}
+.second_list>li>a{
+	color: #4461bd;
+}
+.banner-search-group .search-input-btn{
+	background: #4461bd;
+}
+.chart-tab ul li.chartActive{
+	background: #4461bd;
+    border: 1px solid #4461bd;
+}
+.cbk.cb_active{
+	background-image: url(cb_a_blue.png)/*tpa=https://app.readoor.cn/assets/img/cb_a_blue.png*/;
+}
+.search-tool-sort .sort-up, .search-tool-sort .sort-up{
+	background: url(arrowUp_blue.png)/*tpa=https://app.readoor.cn/assets/img/arrowUp_blue.png*/ no-repeat;
+    background-position: center right 10px;
+}
+.search-tool-sort .sort-down, .search-tool-sort .sort-down{
+	background: url(arrowDown_blue.png)/*tpa=https://app.readoor.cn/assets/img/arrowDown_blue.png*/ no-repeat;
+    background-position: center right 10px;
+}
+/*头部*/
+.header.header-style-1 .loginItem>a:hover{
+	color: #4461bd;
+}
+.header.header-style-1 .nav>ul>li>a.check-after {
+	color: #4461bd;
+}
+.header.header-style-2 .search .search-btn{
+	background: #4461bd;
+}
+.header.header-style-2 .search{
+	border: 1px solid #4461bd;
+}
+.header-style-2 nav {
+	background: #4461bd;
+}
+.header.header-style-2 .search-des > p > span > a:hover {
+	color: #4461bd;
+}
+/* 音视频播放器 */
+.progress-control .progress-holder .play-progress{
+	background: #4461bd;
+}
+.progress-control .progress-holder .mouse-display{
+	background: #4461bd;
+}
+/* layui下拉框颜色 */
+.layui-form-select dl dd.layui-this{
+	background-color: #4461bd;
+}
+/* hover颜色 */
+.zllist-cont-title > a:hover p{
+	color: #4461bd;
+}
+.header.header-style-1 .search .search-btn:hover{
+	color: #4461bd;
+}
+.model-courseware-item-tool i:hover{
+	color: #4461bd;
+}
+/* tab-check颜色 */
+.slide-nav-check{
+	background-color: rgba(68, 97, 189, 0.1);
+    border-left: 4px solid #4461bd;
+}
+@media only screen and (max-width: 1024px){
+	.cx-detail.classcont .cont-slide .slide-nav li.slide-nav-check>a {
+		color: #4461bd;
+	}
+	.cx-detail.classcont .cont-slide .slide-nav li.slide-nav-check::after{
+		background: #4461bd;
+	}
+}
+/* 详情页 */
+.zllist-sign{
+	background: #4461bd;
+}
+/* 个人中心 */
+
+.cx-column-person-l ul .person-check{
+	color: #4461bd;
+}
+.cx-column-person-l ul .person-check span{
+	color: #4461bd;
+}
+.cx-column-person-l ul .person-check span:before{
+	color: #4461bd;
+}
+.cx-column-person-l ul li:hover {
+    background: rgba(68, 97, 189, 0.1)
+}
+@media only screen and (max-width: 1024px) {
+	.select-year .dropdown-menu>li>ul>li.on{
+		background: #4461bd;
+		border: 1px solid #4461bd;
+	}
+}
+
+/* 课程 */
+.slide-nav li:hover {
+    background-color: rgba(68, 97, 189, 0.1);
+}
+.model-courseware-item[data-lessonfile]:hover{
+	background-color: rgba(68, 97, 189, 0.1);
+}
+.model-courseware-item[data-lessonfile]:hover .model-courseware-item-text>p{
+	color: #4461bd;
+}
+
+/*我的-我的班级-头部*/
+.person-class-head {
+    background: #4461bd;
+}
+/*分类*/
+.classNav.parent .sele{
+    background: none;
+}
+.cx-class-selec ul .sele {
+    color: #fff;
+    background: #4461bd;
+  }
+  .cx-class-selec ul li:hover {
+    color: #fff;
+    background: #4461bd;
+  }
+  .cx-class-selec.parent ul .sele {
+    color: #4461bd;
+    background:none;
+  }
+  .cx-class-selec.parent ul .sele::after{
+    content: '';
+    width: 100%;
+    height: 3px;
+    background: #4461bd;
+    display: inline-block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  .cx-class-selec.parent ul li:hover {
+    color: #4461bd;
+    background:none;
+  }
+  .classNav .swiper-slide span.sele {
+    color: #4461bd;
+    border-bottom: 2px solid #4461bd;
+  }
+  .classNav.children .swiper-slide span.sele {
+    border-bottom: none;
+    background: #f2f2f2;
+    color: #4461bd;
+  }
+
+  .va-list .va-list-tab>ul>li.check-after{
+	border-bottom: 3px solid #4461bd;
+}
+
+
+/*慕课课程详情页*/
+.cx-detail.classb .model-mooc .model-mooc-courseware.learning a{
+	color: #4461bd;
+}
+.cx-detail.classb .model-mooc .model-mooc-courseware:hover .model-mooc-courseware-title,.cx-detail.classb .model-mooc .model-mooc-courseware:hover .courseware-info-progress{
+	color: #4461bd;
+}
+.cx-detail.classb .model-mooc .model-mooc-courseware.learning .model-mooc-courseware-title,.cx-detail.classb .model-mooc .model-mooc-courseware.learning .courseware-info-progress{
+	color: #4461bd;
+} 
+.cx-detail.classb .detail-tool .details-buy-center-solid{
+	background-color: #4461bd;
+	border-color: #4461bd;
+}
+.cx-detail.classb .detail-tool .details-buy-center-solid:focus, .cx-detail.classb .detail-tool .details-buy-center-solid:hover {
+	color: #fff;
+	opacity: 0.8;
+}
+.cx-detail.cx-report.model-mooc-courseware.learning .model-mooc-courseware-title, .cx-detail.cx-report .model-mooc-courseware.learning .courseware-info-progress{
+	color: #4461bd;
+}
+.cx-detail.cx-report .model-mooc-courseware:hover .model-mooc-courseware-title, .cx-detail.cx-report .model-mooc-courseware:hover .courseware-info-progress{
+	color: #4461bd;
+}
+
+
+/*学习报表相关*/
+
+.cx-detail.classb .detail-head .detail-record .detail-record-class{
+	color: #4461bd;
+}
+.cx-detail.classb .detail-head .detail-record .detail-record-button{
+	background: #4461bd;
+}
+.person-class-record-button>a{
+	color: #4461bd;
+}
+.cx-report .cx-report-info-class{
+	color: #4461bd;
+}
+
+/*个人中心*/
+.cx-column-person-l ul .person-check {
+    color: #4461bd;
+}
+.cx-column-person-l ul .person-check span:before {
+    color: #4461bd;
+}
+.cx-info-uploadimg input {
+    border: 1px solid #4461bd;
+    color: #4461bd;
+}
+
+@media screen and (max-width: 1024px){
+	/*慕课课程详情页*/
+	.cx-detail.classb .model-mooc .model-mooc-courseware:hover .model-mooc-courseware-title{
+		color: #666;
+	}
+	.cx-detail.classb .model-mooc .model-mooc-courseware:hover .courseware-info-progress{
+		color: #aaa;
+	}
+
+	/*学习报表相关*/
+	.cx-detail.classb .detail-head .detail-record .detail-record-button a{
+		color: #4461bd;
+	}
+	.person-class-content .person-class-record-button a{
+		color: #4461bd;
+	}
+	.cx-report .cx-report-title::before{
+		background-color: #4461bd;
+	}
+	.cx-report .cx-report-echarts-title p:before{
+		background-color: #4461bd;
+	}
+	.cx-report .cx-report-course-title:before{
+		background-color: #4461bd;
+	}
+}
+
+/*检索页*/
+.cx-highlight {
+    color: #4461bd;
+}
+.cx-search-tab >p.checked {
+    color: #4461bd;
+}
+.cx-color-blue {
+    color: #4461bd;
+}
